@@ -24,7 +24,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-    origin: ["http://localhost:3000", "http://localhost:3001"], // Allow both default and fallback ports
+    origin: [process.env.BACKEND_URL, "https://frontend-lilac-nu-10.vercel.app/", "http://localhost:3000", "http://localhost:3001"], // Allow both default and fallback ports
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
